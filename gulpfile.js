@@ -70,13 +70,13 @@ export const server = () => {
         server: {
             baseDir: 'dist'
         }
-    })
+    });
 }
 
 export const watch = () => {
     gulp.watch('src/*.html', gulp.series(html));
-    gulp.watch('src/**/*.scss', gulp.series(scss));
-    gulp.watch('src/**/*.js', gulp.series(js));
+    gulp.watch('src/**/*.scss', gulp.series(scss, html));
+    gulp.watch('src/js/*.js', gulp.series(js));
     gulp.watch('src/media/**/*', gulp.series(clean, copy));
 }
 
