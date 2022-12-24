@@ -1,0 +1,24 @@
+// midle desctop sreen
+@media screen and (min-width: $tablet-screen) {
+    .name{
+        font-family: $header-font;
+        color: white;
+        font-style: bold;
+        text-transform: uppercase;
+        &--first-word{
+            font-size: min(83.3vh, 47vw, 600px);
+            line-height: 40%;
+            margin-bottom: 33%;
+        }
+        &--other-word{
+            font-size: min(38vh, 21.5vw, 275px);
+            line-height: 81.5%;
+            margin-top: -7%;
+        }
+    }
+
+}
+// mobile
+@media screen and (max-width: $mobile-screen){
+
+}

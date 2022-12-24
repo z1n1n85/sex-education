@@ -1,17 +1,5 @@
 @media screen and (min-width: $tablet-screen) {
-    .name{
-        font-family: $header-font;
-        color: white;
-        font-style: bold;
-        &--first-word{
-            font-size: 600px;
-            line-height: 720px;
-        }
-        &--other-word{
-            font-size: 275px;
-            line-height: 81.5%;
-        }
-    }
+
     .chapter-header{
         font-family: $header-font;
         color: black;

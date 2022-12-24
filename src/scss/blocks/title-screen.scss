@@ -1,0 +1,44 @@
+// midle desctop sreen
+@media (orientation: landscape) {
+    .title-screen{
+        height: 100vh;
+        display: flex;
+        &__section{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 25px;
+            &--first{
+                flex-basis: 40%;
+                & *{
+                    align-self: flex-end;
+                }
+            }
+            &--second{
+                flex-basis: 60%;
+                background:
+                linear-gradient(0deg, rgba(18, 204, 229, 0.54), rgba(18, 204, 229, 0.54)),
+                url(media/picture/sky.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+        &__colum{
+            display: block;
+            // // width: 27.7vw;
+            // width: 90%;
+            // // height: 45vh;
+            // height: auto;
+            min-width: 80%;
+            height: auto;
+            // flex-grow: 1;
+            object-fit: cover;
+            object-position: top;
+            margin: 0 auto -25px;
+        }
+    }
+}
+// mobile
+@media screen and (max-width: $mobile-screen){
+
+}
