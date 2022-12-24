@@ -1,2 +1,16 @@
+// reset 
+@import 'scss/reset.scss';
+
+// settings
 @import 'scss/import-fonts.scss';
 @import 'scss/variables.scss';
+
+// blocks
+@import 'scss/blocks/page.scss';
+@import 'scss/blocks/title-screen.scss';
+@import 'scss/blocks/name.scss';
+
+// feature
+@import 'scss/blocks/border.scss';
+@import 'scss/blocks/background-anim-gradien.scss';
+
