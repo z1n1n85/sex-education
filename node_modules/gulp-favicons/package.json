@@ -1,0 +1,36 @@
+{
+  "name": "gulp-favicons",
+  "version": "3.0.0",
+  "description": "Favicons generator for Gulp",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rejas/gulp-favicons.git"
+  },
+  "scripts": {
+    "test": "cd test && gulp"
+  },
+  "keywords": [
+    "favicons",
+    "node",
+    "rfg",
+    "generator",
+    "gulp",
+    "gulpplugin"
+  ],
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "author": "Hayden Bleasel <haydenbleasel@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rejas/gulp-favicons/issues"
+  },
+  "homepage": "https://github.com/rejas/gulp-favicons",
+  "dependencies": {
+    "favicons": "^6.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

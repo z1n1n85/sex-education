@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "name": "Favicons 4.0",
+  "description": "Testing suite for Favicons",
+  "icons": {
+    "60": "stream/firefox_app_60x60.png",
+    "128": "stream/firefox_app_128x128.png",
+    "512": "stream/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "Hayden Bleasel",
+    "url": "http://haydenbleasel.com/"
+  }
+}
