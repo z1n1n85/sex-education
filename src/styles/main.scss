@@ -1,7 +1,7 @@
 // Переменные, миксины, функции
 @import "helpers/variables";
 @import "helpers/mixins";
-@import "helpers/functions";
+// @import "helpers/functions";
 
 // CSS-файлы библиотек
 @import "vendor/libs";
@@ -12,3 +12,6 @@
 
 // БЭМ-блоки
 @import "../blocks/modules/modules";
+
+// Компоненты
+@import "../blocks/components/components";
