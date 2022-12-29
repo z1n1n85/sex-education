@@ -8,6 +8,9 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;
+
+0,700;1,400&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -378,6 +381,18 @@ template {
   display: none;
 }
 
+@font-face {
+  font-family: "SegmentA";
+  src: url(../fonts/SegmentAKeyTrial-Bold.woff);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "SegmentA";
+  src: url(../fonts/SegmentAKeyTrial-Regular.woff);
+  font-weight: normal;
+}
+
 h1,
 h2,
 h3,
@@ -387,5 +402,128 @@ h6,
 ul {
   margin: 0;
   padding: 0;
+}
+
+body {
+  color: red;
+}
+
+.border {
+  border: 2px solid #000000;
+  margin-top: -2px;
+  margin-left: -2px;
+}
+
+.bg-anim-gradient {
+  animation: animateBg 10s linear infinite;
+  background-image: linear-gradient(45deg, #ff67b8, #12cce5, #ff67b8, #12cce5);
+  background-size: 300% 300%;
+}
+
+@keyframes animateBg {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .chapter-header {
+    font-family: "SegmentA", sans-serif;
+    color: black;
+    font-size: 300px;
+    line-height: 360px;
+  }
+
+  .content-chapter {
+    color: white;
+  }
+
+  .content-chapter--n {
+    font-family: "SegmentA", sans-serif;
+    font-size: 400px;
+    line-height: 480px;
+  }
+
+  .content-chapter--name {
+    font-family: "PT Sans", sans-serif;
+    font-size: 45px;
+    line-height: 83.4%;
+  }
+
+  .content-chapter--paragraphs {
+    font-family: "PT Sans", sans-serif;
+    font-size: 25px;
+    line-height: 32px;
+    text-decoration-line: underline;
+  }
+
+  .text {
+    color: black;
+  }
+}
+
+@media (orientation: landscape) {
+  .title-screen {
+    height: 100vh;
+    display: flex;
+  }
+
+  .title-screen__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+  }
+
+  .title-screen__section--first {
+    flex-basis: 40%;
+  }
+
+  .title-screen__section--first * {
+    align-self: flex-end;
+  }
+
+  .title-screen__section--second {
+    flex-basis: 60%;
+    background: linear-gradient(0deg, rgba(18, 204, 229, 0.54), rgba(18, 204, 229, 0.54)), url(media/picture/sky.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .title-screen__name {
+    font-family: "SegmentA", sans-serif;
+    color: white;
+    font-style: bold;
+    text-transform: uppercase;
+  }
+
+  .title-screen__name--first-word {
+    font-size: min(83.3vh, 47vw, 600px);
+    line-height: 40%;
+    margin-bottom: 33%;
+  }
+
+  .title-screen__name--other-word {
+    font-size: min(38vh, 21.5vw, 275px);
+    line-height: 81.5%;
+    margin-top: -7%;
+  }
+
+  .title-screen__colum {
+    display: block;
+    min-width: 80%;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+    margin: 0 auto -25px;
+  }
 }
 /*# sourceMappingURL=maps/main.css.map */
