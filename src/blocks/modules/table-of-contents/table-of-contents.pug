@@ -1,0 +1,30 @@
+-
+    const chapters = [
+        {
+            name: 'психология',
+        },
+        {
+            name: 'секс',
+        },
+        {
+            name: 'физиология',
+            paragraphs: ['Мужская физиология', 'Женская физиология']
+        },
+        {
+            name: 'контрацепция',
+            paragraphs: ['Гармональная', 'Химическая', 'Внутриматочная', 'Хирургическая']
+        },
+        {
+            name: 'зппп',
+            paragraphs: ['ВИЧ', 'Генитальный герпес', 'Сифилис', 'Хламидиоз', 'Кандидоз (Молочница)']
+        },
+        {
+            name: 'менструация',
+        },
+    ]
+
+.table-of-contents.border.section-container
+    .section-name Содержание
+    ol.chapter-container 
+        each chapter, key in chapters 
+            include ../../components/chapter/chapter
