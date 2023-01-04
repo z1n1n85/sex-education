@@ -1,0 +1,14 @@
+if key % 2 != 0
+    li.chapter.chapter--bg-sky
+        .chapter__name #{chapter.name}
+        if chapter.paragraphs !== undefined
+            ol.chapter__paragraph-container
+                each paragraph in chapter.paragraphs
+                    li.chapter__paragraph #{paragraph}
+else 
+    li.chapter.chapter--bg-pink
+        .chapter__name #{chapter.name}
+            if chapter.paragraphs !== undefined
+                ol.chapter__paragraph-container
+                    each paragraph in chapter.paragraphs
+                        li.chapter__paragraph #{paragraph}

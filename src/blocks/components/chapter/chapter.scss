@@ -1,0 +1,44 @@
+.chapter{
+    display: flexнф;
+    width: 350px;
+    height: 350px;
+    margin: 0 12.5px 25px 12.5px;
+    counter-reset: paragraph;
+    &--bg-pink{
+        background-color: $pink;
+    }
+    &--bg-sky{
+        background-image: url('../img/skyb.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    color: black;
+    &::before{
+        counter-increment: chapter;
+        content: counter(chapter);
+        display: block;
+        position: relative;
+        font-family: $header-font;
+        font-size: 400px;
+        line-height: 160px;
+        right: -130px;
+    }
+    &__name{
+        font-family: $base-font;
+        font-size: 45px;
+        line-height: 83.4%;
+    }
+    &__paragraph-container{
+        list-style: none;
+    }
+    &__paragraph{
+        font-family: $base-font;
+        font-size: 25px;
+        line-height: 32px;
+        text-decoration-line: underline;
+    }
+    &__paragraph::before{
+        counter-increment: paragraph;
+        content: "§" counter(paragraph) " ";
+    }
+}
