@@ -1,31 +1,6 @@
 @media screen and (min-width: $tablet-screen) {
-
-    .chapter-header{
-        font-family: $header-font;
-        color: black;
-        font-size: 300px;
-        line-height: 360px;
-    }
-    .content-chapter{
-        color: white;
-        &--n{
-            font-family: $header-font;
-            font-size: 400px;
-            line-height: 480px;
-        }
-        &--name{
-            font-family: $base-font;
-            font-size: 45px;
-            line-height: 83.4%;
-        }
-        &--paragraphs{
-            font-family: $base-font;
-            font-size: 25px;
-            line-height: 32px;
-            text-decoration-line: underline;
-        }
-    }
     .text{
+        font-family: $base-font;
         color: black;
     }
 }
