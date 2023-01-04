@@ -1,13 +1,12 @@
 // midle desctop sreen
 @media (orientation: landscape) {
     .title-screen{
-        height: 100vh;
         display: flex;
         &__section{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 25px;
+            align-items: center;
             &--first{
                 flex-basis: 40%;
                 & *{
@@ -16,9 +15,7 @@
             }
             &--second{
                 flex-basis: 60%;
-                background:
-                linear-gradient(0deg, rgba(18, 204, 229, 0.54), rgba(18, 204, 229, 0.54)),
-                url(media/picture/sky.jpg);
+                background-image: url('../img/skyb.jpg');
                 background-repeat: no-repeat;
                 background-size: cover;
             }
@@ -29,28 +26,20 @@
             font-style: bold;
             text-transform: uppercase;
             &--first-word{
-                font-size: min(83.3vh, 47vw, 600px);
+                font-size: min(46vw, 600px);
                 line-height: 40%;
-                margin-bottom: 33%;
+                margin: 0 auto;
             }
             &--other-word{
-                font-size: min(38vh, 21.5vw, 275px);
+                font-size: min(19vw, 275px);
                 line-height: 81.5%;
-                margin-top: -7%;
+                margin-top: max(-2.5vw, -40px);
             }
         }
         &__colum{
-            display: block;
-            // // width: 27.7vw;
-            // width: 90%;
-            // // height: 45vh;
-            // height: auto;
-            min-width: 80%;
-            height: auto;
-            // flex-grow: 1;
-            object-fit: cover;
-            object-position: top;
-            margin: 0 auto -25px;
+            width: 28vw;
+            max-width: 355px;
+            margin: min(160px, 12vw) auto -25px;
         }
     }
 }
