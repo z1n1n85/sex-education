@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -8,9 +10,6 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;
-
-0,700;1,400&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -381,6 +380,24 @@ template {
   display: none;
 }
 
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:focus,
+a:hover,
+a:visited,
+a:link {
+  color: black;
+  text-decoration-line: none;
+  border: none;
+  outline: none;
+}
+
 @font-face {
   font-family: "SegmentA";
   src: url(../fonts/SegmentAKeyTrial-Bold.woff);
@@ -404,8 +421,29 @@ ul {
   padding: 0;
 }
 
-body {
-  color: red;
+body,
+html {
+  display: block;
+  height: 100%;
+  overflow-x: hidden !important;
+  width: 100%;
+}
+
+body > .container,
+html > .container {
+  max-width: 1280px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.table-of-contents__chapter-container {
+  display: flex;
+  margin-bottom: -25px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  counter-reset: chapter;
 }
 
 .border {
@@ -414,65 +452,148 @@ body {
   margin-left: -2px;
 }
 
+.chapter {
+  display: flex;
+  width: 320px;
+  height: 320px;
+  margin: 0 12.5px 25px 12.5px;
+  padding: 15px;
+  counter-reset: paragraph;
+  border: 3px solid white;
+}
+
+.chapter--bg-pink {
+  background-color: #FF678B;
+}
+
+.chapter--bg-sky {
+  background-image: url("../img/skyb.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.chapter::before {
+  counter-increment: chapter;
+  content: counter(chapter);
+  display: block;
+  position: relative;
+  width: 80px;
+  margin-right: 10px;
+  font-family: "SegmentA", sans-serif;
+  font-size: 400px;
+  line-height: 160px;
+  color: white;
+}
+
+.chapter:focus-within,
+.chapter:hover {
+  border: 3px solid black;
+}
+
+.chapter:focus-within::before,
+.chapter:hover::before {
+  color: black;
+}
+
+.chapter__name {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 83.4%;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: white;
+}
+
+.chapter__name:link {
+  color: white;
+}
+
+.chapter__name:visited {
+  color: white;
+}
+
+.chapter__name:hover,
+.chapter__name:focus {
+  color: black;
+  text-decoration-line: underline;
+  border: none;
+}
+
+.chapter__paragraph-container {
+  margin-top: 30px;
+  list-style: none;
+}
+
+.chapter__paragraph {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 32px;
+  text-decoration-line: underline;
+  word-break: normal;
+  color: white;
+}
+
+.chapter__paragraph:link {
+  color: white;
+}
+
+.chapter__paragraph:visited {
+  color: white;
+}
+
+.chapter__paragraph:hover,
+.chapter__paragraph:focus {
+  color: black;
+  text-decoration-line: underline;
+  border: none;
+}
+
+.chapter__paragraph::before {
+  counter-increment: paragraph;
+  content: "§" counter(paragraph) " ";
+}
+
+.section-name {
+  margin-top: max(-9vw, -110px);
+  margin-bottom: 100px;
+  font-family: "SegmentA", sans-serif;
+  color: black;
+  font-size: max(min(300px, 23vw), 210px);
+  line-height: max(min(360px, 28vw), 252px);
+  text-transform: uppercase;
+}
+
+.section-container {
+  padding: 25px;
+}
+
 .bg-anim-gradient {
-  animation: animateBg 10s linear infinite;
-  background-image: linear-gradient(45deg, #ff67b8, #12cce5, #ff67b8, #12cce5);
+  animation: animateBg 8s linear infinite;
+  background-image: linear-gradient(30deg, #12CCE5, #FF527B, #12CCE5, #FF527B);
   background-size: 300% 300%;
 }
 
 @keyframes animateBg {
   0% {
-    background-position: 0% 0%;
-  }
-
-  50% {
-    background-position: 100% 100%;
+    background-position: 0% 100%;
   }
 
   100% {
-    background-position: 0% 0%;
+    background-position: 100% 0%;
   }
 }
 
 @media screen and (min-width: 720px) {
-  .chapter-header {
-    font-family: "SegmentA", sans-serif;
-    color: black;
-    font-size: 300px;
-    line-height: 360px;
-  }
-
-  .content-chapter {
-    color: white;
-  }
-
-  .content-chapter--n {
-    font-family: "SegmentA", sans-serif;
-    font-size: 400px;
-    line-height: 480px;
-  }
-
-  .content-chapter--name {
-    font-family: "PT Sans", sans-serif;
-    font-size: 45px;
-    line-height: 83.4%;
-  }
-
-  .content-chapter--paragraphs {
-    font-family: "PT Sans", sans-serif;
-    font-size: 25px;
-    line-height: 32px;
-    text-decoration-line: underline;
-  }
-
   .text {
+    font-family: "PT Sans", sans-serif;
     color: black;
   }
 }
 
 @media (orientation: landscape) {
   .title-screen {
-    height: 100vh;
     display: flex;
   }
 
@@ -480,7 +601,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 25px;
+    align-items: center;
   }
 
   .title-screen__section--first {
@@ -493,7 +614,7 @@ body {
 
   .title-screen__section--second {
     flex-basis: 60%;
-    background: linear-gradient(0deg, rgba(18, 204, 229, 0.54), rgba(18, 204, 229, 0.54)), url(media/picture/sky.jpg);
+    background-image: url("../img/skyb.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -506,24 +627,21 @@ body {
   }
 
   .title-screen__name--first-word {
-    font-size: min(83.3vh, 47vw, 600px);
+    font-size: min(46vw, 600px);
     line-height: 40%;
-    margin-bottom: 33%;
+    margin: 0 auto;
   }
 
   .title-screen__name--other-word {
-    font-size: min(38vh, 21.5vw, 275px);
+    font-size: min(19vw, 275px);
     line-height: 81.5%;
-    margin-top: -7%;
+    margin-top: max(-2.5vw, -40px);
   }
 
   .title-screen__colum {
-    display: block;
-    min-width: 80%;
-    height: auto;
-    object-fit: cover;
-    object-position: top;
-    margin: 0 auto -25px;
+    width: 28vw;
+    max-width: 355px;
+    margin: min(160px, 12vw) auto -25px;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */

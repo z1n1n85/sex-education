@@ -352,3 +352,10 @@ ol, ul, li{
 	margin: 0;
 	padding: 0;
 }
+
+a, a:focus, a:hover, a:visited, a:link{
+	color: black;
+	text-decoration-line: none;
+	border: none;
+	outline: none;
+}

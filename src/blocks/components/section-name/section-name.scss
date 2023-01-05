@@ -3,7 +3,7 @@
     margin-bottom: 100px;
     font-family: $header-font;
     color: black;
-    font-size: min(300px, 23vw);
-    line-height: min(360px, 28vw);
+    font-size: max(min(300px, 23vw), 210px);
+    line-height: max(min(360px, 28vw), 252px);
     text-transform: uppercase;
 }
