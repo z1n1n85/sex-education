@@ -1,14 +1,18 @@
 if key % 2 != 0
     li.chapter.chapter--bg-sky
-        .chapter__name #{chapter.name}
-        if chapter.paragraphs !== undefined
-            ol.chapter__paragraph-container
-                each paragraph in chapter.paragraphs
-                    li.chapter__paragraph #{paragraph}
-else 
-    li.chapter.chapter--bg-pink
-        .chapter__name #{chapter.name}
+        .chapter__links
+            a(href="https://www.google.com/").chapter__name #{chapter.name}
             if chapter.paragraphs !== undefined
                 ol.chapter__paragraph-container
                     each paragraph in chapter.paragraphs
-                        li.chapter__paragraph #{paragraph}
+                        li.chapter__paragraph-item
+                            a(href="https://www.google.com/").chapter__paragraph #{paragraph}
+else 
+    li.chapter.chapter--bg-pink
+        .chapter__links
+            a(href="https://www.google.com/").chapter__name #{chapter.name}
+            if chapter.paragraphs !== undefined
+                ol.chapter__paragraph-container
+                    each paragraph in chapter.paragraphs
+                        li.chapter__paragraph-item
+                            a(href="https://www.google.com/").chapter__paragraph #{paragraph}

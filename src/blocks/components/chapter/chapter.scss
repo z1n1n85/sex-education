@@ -1,9 +1,11 @@
 .chapter{
-    display: flexнф;
-    width: 350px;
-    height: 350px;
+    display: flex;
+    width: 320px;
+    height: 320px;
     margin: 0 12.5px 25px 12.5px;
+    padding: 15px;
     counter-reset: paragraph;
+    border: 3px solid white;
     &--bg-pink{
         background-color: $pink;
     }
@@ -12,33 +14,64 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
-    color: black;
     &::before{
         counter-increment: chapter;
         content: counter(chapter);
         display: block;
         position: relative;
+        width: 80px;
+        margin-right: 10px;
         font-family: $header-font;
         font-size: 400px;
         line-height: 160px;
-        right: -130px;
+        color: white;
     }
+    &:focus-within, &:hover{
+        border: 3px solid black;
+        &::before{
+            color: black;
+        }
+    }
+
     &__name{
         font-family: $base-font;
+        font-weight: 700;
         font-size: 45px;
         line-height: 83.4%;
+        word-wrap: break-word;
+        word-break: break-all;
+        color: white;
+        &:link{ color: white; }
+        &:visited{ color: white; }
+        &:hover, &:focus{
+            color: black;
+            text-decoration-line: underline;
+            border: none;
+        }
     }
     &__paragraph-container{
+        margin-top: 30px;
         list-style: none;
     }
     &__paragraph{
         font-family: $base-font;
+        font-weight: 400;
         font-size: 25px;
         line-height: 32px;
         text-decoration-line: underline;
+        word-break:normal;
+        color: white;
+        &:link{ color: white; }
+        &:visited{ color: white; }
+        &:hover, &:focus{
+            color: black;
+            text-decoration-line: underline;
+            border: none;
+        }
     }
     &__paragraph::before{
         counter-increment: paragraph;
         content: "§" counter(paragraph) " ";
     }
+
 }
