@@ -1,5 +1,5 @@
 if key % 2 != 0
-    li.chapter.chapter--bg-sky
+    li.chapter.chapter--bg-sky.bg-paralax-sky.main-paralax
         .chapter__links
             a(href="https://www.google.com/").chapter__name #{chapter.name}
             if chapter.paragraphs !== undefined
@@ -8,7 +8,7 @@ if key % 2 != 0
                         li.chapter__paragraph-item
                             a(href="https://www.google.com/").chapter__paragraph #{paragraph}
 else 
-    li.chapter.chapter--bg-pink
+    li.chapter.chapter--bg-pink.main-paralax
         .chapter__links
             a(href="https://www.google.com/").chapter__name #{chapter.name}
             if chapter.paragraphs !== undefined
