@@ -1,6 +1,28 @@
-@media screen and (min-width: $tablet-screen) {
-    .text{
-        font-family: $base-font;
-        color: black;
+.text{
+
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 32px;
+    font-family: $base-font;
+    color: black;
+    & + &{
+        margin-top: 0.5em;
+    }
+    &--link{
+        text-decoration-line: underline;
+        &:visited, &:link{
+            color: inherit;
+            text-decoration-line: underline;
+        }
+        &:focus, &:hover{
+            color: $pink;
+            text-decoration-line: underline;
+        }
+    }
+    &--white{
+        color: white;
+    }
+    &--bold{
+        font-weight: 700;
     }
 }
