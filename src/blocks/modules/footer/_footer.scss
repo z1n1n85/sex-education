@@ -1,0 +1,33 @@
+.footer{
+    background-color: black;
+    padding: 50px 100px 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    &__logo{
+        font-family: $header-font;
+        font-weight: 400;
+        font-size: 150px;
+        line-height: 100px;
+        color: #FFFFFF;
+    }
+}
+@media (orientation: landscape) {
+    .footer{
+        flex-direction: row;
+        &__credits{
+            width: 350px;
+        }
+    }
+}
+@media (orientation: portrait) {
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        &__credits{
+            width: auto;
+        }
+        &__logo{
+            margin-bottom: 75px;
+        }
+    }
+}

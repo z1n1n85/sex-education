@@ -1,0 +1,18 @@
+@media (orientation: landscape){
+    .for-whom{
+        display: flex;
+        &__text{
+            flex-basis: 65%;
+        }
+        &__empty{
+            flex-basis: 35%;
+        }
+    }
+}
+@media (orientation: portrait){
+    .for-whom{
+        &__empty{
+            display: none;
+        }
+    }
+}

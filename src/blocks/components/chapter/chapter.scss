@@ -1,7 +1,11 @@
 .chapter{
     display: flex;
-    width: 320px;
+    min-width: 280px;
+    width: 120px;
+    max-width: 400px;
     height: 320px;
+    flex-grow: 1;
+    flex-shrink: 1;
     margin: 0 12.5px 25px 12.5px;
     padding: 15px;
     counter-reset: paragraph;
@@ -32,7 +36,6 @@
             color: black;
         }
     }
-
     &__name{
         font-family: $base-font;
         font-weight: 700;
@@ -73,5 +76,23 @@
         counter-increment: paragraph;
         content: "§" counter(paragraph) " ";
     }
+}
 
+@media (orientation: portrait) {
+    .chapter{
+        min-width: 200px;
+        max-height: 270px;
+        &::before{
+            font-size: 350px;
+            line-height: 120px;
+        }
+        &__name{
+            font-size: 35px;
+            line-height: 83.4%;
+        }
+        &__paragraph{
+            font-size: 20px;
+            line-height: 27px;
+        }
+    }
 }

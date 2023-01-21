@@ -8,4 +8,34 @@
         list-style: none;
         counter-reset: chapter;
     }
+    &__dropdown-btn{
+        position: relative;
+        top: 3vw;
+        width: calc(100% + (min(25px, 5vw) + 2px) * 2);
+        height: 2em;
+        margin: calc(-1 * (min(25px, 5vw) + 2px));
+        margin-top: 0;
+        background-color: white;
+        border: 2px solid #000000;
+        text-align: center;
+    }
+}
+@media (orientation: landscape) {
+    .table-of-contents{
+        &__dropdown-btn{
+            display: none;
+        }
+    }
+}
+@media (orientation: portrait) {
+    .table-of-contents{
+        &__chapter-container{
+            transition: height 2s;
+            overflow: hidden;
+            height: 60vh;
+        }
+        &__chapter-container--open{
+            height: auto;
+        }
+    }
 }

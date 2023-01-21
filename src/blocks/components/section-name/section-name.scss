@@ -1,9 +1,50 @@
-.section-name{
-    margin-top: max(-9vw, -110px);
-    margin-bottom: 100px;
+.section-name__desctop-text, .section-name__mobile-text{
     font-family: $header-font;
     color: black;
+    font-weight: 400;
     font-size: max(min(300px, 23vw), 210px);
     line-height: max(min(360px, 28vw), 252px);
     text-transform: uppercase;
+}
+@media (orientation: landscape) {
+    .section-name{
+        &__desctop-text{
+            margin-top: -0.37em;
+            margin-bottom: 100px;
+        }
+        &__mobile-text, &__border{
+            display: none;
+        }
+    }
+}
+@media (orientation: portrait) {
+    .section-name{
+        // margin-top: max(-25.5vw, -90px);
+        margin-bottom: 10px;
+        &__desctop-text{
+            display: none;
+        }
+        &__border{
+            max-width: calc(100% + 2 * min(25px, 5vw));
+            display: flex;
+            margin: calc(-1 * (min(25px, 5vw) + 2px));
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border: 2px solid #000000;
+            flex-wrap: nowrap;
+            overflow: hidden;
+        }
+        &__mobile-text{
+            position: relative;
+            margin-top: -0.3em;
+            padding: 0 25px 0;
+            flex-shrink: 0;
+            animation: ticker 5s linear infinite;
+        }
+    }
+}
+
+@keyframes ticker{
+    0% { transform: translateZ(0); }
+    100% { transform: translate3d(-100%, 0, 0); }
 }
