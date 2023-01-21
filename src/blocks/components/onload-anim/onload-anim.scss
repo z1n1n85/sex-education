@@ -1,0 +1,10 @@
+.onload-anim{
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-name: appear;
+}
+@keyframes appear { 
+    0% {opacity: 0; } 
+    100% {opacity: 1;} 
+}
