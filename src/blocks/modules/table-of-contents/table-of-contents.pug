@@ -1,30 +1,24 @@
 -
-    const chapters = [
-        {
+    const chapters = [{
             name: 'психология',
-        },
-        {
+        },{
             name: 'секс',
-        },
-        {
+        },{
             name: 'физиология',
             paragraphs: ['Мужская физиология', 'Женская физиология']
-        },
-        {
+        },{
             name: 'контрацепция',
             paragraphs: ['Гармональная', 'Химическая', 'Внутриматочная', 'Хирургическая']
-        },
-        {
+        },{
             name: 'зппп',
             paragraphs: ['ВИЧ', 'Генитальный герпес', 'Сифилис', 'Хламидиоз', 'Кандидоз (Молочница)']
-        },
-        {
+        },{
             name: 'менструация',
-        },
-    ]
+        },];
 
 .table-of-contents.border.section-container
-    .section-name Содержание
-    ol.table-of-contents__chapter-container 
+    +section_name("Содержание")
+    ol.table-of-contents__chapter-container
         each chapter, key in chapters 
             include ../../components/chapter/chapter
+    button.table-of-contents__dropdown-btn.text.text--bold ↓↓↓
