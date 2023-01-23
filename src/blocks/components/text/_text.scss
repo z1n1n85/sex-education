@@ -1,5 +1,4 @@
-.text{
-
+.text, p, li{
     font-weight: 400;
     font-size: 25px;
     line-height: 32px;
@@ -25,4 +24,13 @@
     &--bold{
         font-weight: 700;
     }
+}
+
+.p-initial-letter::first-letter{
+    font-family: $header-font;
+    font-size: 5em;
+    font-style: normal;
+    color: black;
+    float: left;
+    margin: 0 10px 5px 0;
 }
