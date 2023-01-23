@@ -1,0 +1,18 @@
+.chapter-container{
+    display: grid;
+    grid-template-areas:
+    'sib tit tit'
+    'sib txt img';
+    grid-template-columns:
+    15% 60% 25%;
+    grid-template-rows:
+    auto auto;
+}
+
+.chapter-sidebar{ grid-area: sib; }
+
+.chapter-title { grid-area: tit; }
+
+.chapter-text{ grid-area: txt; }
+
+.chapter-image-panel{ grid-area: img; }
