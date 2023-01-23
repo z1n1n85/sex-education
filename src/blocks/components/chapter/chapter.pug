@@ -1,18 +1,18 @@
 if key % 2 != 0
     li.chapter.chapter--bg-sky.bg-paralax-sky.main-paralax
         .chapter__links
-            a(href="https://www.google.com/").chapter__name #{chapter.name}
+            a(href="chapter-sex.html").chapter__name #{chapter.name}
             if chapter.paragraphs !== undefined
                 ol.chapter__paragraph-container
                     each paragraph in chapter.paragraphs
                         li.chapter__paragraph-item
-                            a(href="https://www.google.com/").chapter__paragraph #{paragraph}
+                            a(href="chapter-sex.html").chapter__paragraph #{paragraph}
 else 
     li.chapter.chapter--bg-pink.main-paralax
         .chapter__links
-            a(href="https://www.google.com/").chapter__name #{chapter.name}
+            a(href="chapter-sex.html").chapter__name #{chapter.name}
             if chapter.paragraphs !== undefined
                 ol.chapter__paragraph-container
                     each paragraph in chapter.paragraphs
                         li.chapter__paragraph-item
-                            a(href="https://www.google.com/").chapter__paragraph #{paragraph}
+                            a(href="chapter-sex.html").chapter__paragraph #{paragraph}
