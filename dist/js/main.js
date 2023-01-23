@@ -46,6 +46,23 @@ window.onload = function () {
 
 /***/ }),
 
+/***/ "./src/blocks/components/chapter-text/chapter-text.js":
+/*!************************************************************!*\
+  !*** ./src/blocks/components/chapter-text/chapter-text.js ***!
+  \************************************************************/
+/***/ (function() {
+
+"use strict";
+
+
+window.onload = function () {
+  var firstP = document.querySelector('.chapter-text > p');
+  firstP.classList.add('p-initial-letter');
+  alert('hhh');
+};
+
+/***/ }),
+
 /***/ "./src/blocks/modules/table-of-contents/table-of-contents.js":
 /*!*******************************************************************!*\
   !*** ./src/blocks/modules/table-of-contents/table-of-contents.js ***!
@@ -76,6 +93,9 @@ table_dropdown_btn.addEventListener("click", function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_components_bg_paralax_sky_bg_paralax_sky__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../blocks/components/bg-paralax-sky/bg-paralax-sky */ "./src/blocks/components/bg-paralax-sky/bg-paralax-sky.js");
 /* harmony import */ var _blocks_components_bg_paralax_sky_bg_paralax_sky__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_blocks_components_bg_paralax_sky_bg_paralax_sky__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _blocks_components_chapter_text_chapter_text__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../blocks/components/chapter-text/chapter-text */ "./src/blocks/components/chapter-text/chapter-text.js");
+/* harmony import */ var _blocks_components_chapter_text_chapter_text__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_blocks_components_chapter_text_chapter_text__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 /***/ }),

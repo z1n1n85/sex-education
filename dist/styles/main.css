@@ -440,6 +440,10 @@ html > .container {
   margin: 0 auto;
 }
 
+::selection {
+  background: #12CCE5;
+}
+
 .title-screen {
   display: flex;
 }
@@ -507,13 +511,40 @@ html > .container {
   color: #FFFFFF;
 }
 
+.chapter-title {
+  padding: 25px;
+  height: auto;
+}
+
+.chapter-title__text {
+  margin: -0.3em auto 0;
+  width: fit-content;
+  font-family: "SegmentA", sans-serif;
+  color: white;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: min(34vw, 445px);
+  line-height: 105%;
+}
+
+.chapter-image-panel {
+  background-color: aliceblue;
+}
+
+.chapter-sidebar {
+  background-color: antiquewhite;
+}
+
 .border {
   border: 2px solid #000000;
   margin-top: -2px;
   margin-left: -2px;
 }
 
-.text {
+.text,
+p,
+li {
   font-weight: 400;
   font-size: 25px;
   line-height: 32px;
@@ -521,32 +552,63 @@ html > .container {
   color: black;
 }
 
-.text + .text {
+.text + .text,
+.text + p,
+.text + li,
+p + .text,
+p + p,
+p + li,
+li + .text,
+li + p,
+li + li {
   margin-top: 0.5em;
 }
 
-.text--link {
+.text--link,
+p--link,
+li--link {
   text-decoration-line: underline;
 }
 
 .text--link:visited,
-.text--link:link {
+.text--link:link,
+p--link:visited,
+p--link:link,
+li--link:visited,
+li--link:link {
   color: inherit;
   text-decoration-line: underline;
 }
 
 .text--link:focus,
-.text--link:hover {
+.text--link:hover,
+p--link:focus,
+p--link:hover,
+li--link:focus,
+li--link:hover {
   color: #FF678B;
   text-decoration-line: underline;
 }
 
-.text--white {
+.text--white,
+p--white,
+li--white {
   color: white;
 }
 
-.text--bold {
+.text--bold,
+p--bold,
+li--bold {
   font-weight: 700;
+}
+
+.p-initial-letter::first-letter {
+  font-family: "SegmentA", sans-serif;
+  font-size: 5em;
+  font-style: normal;
+  color: black;
+  float: left;
+  margin: 0 10px 5px 0;
 }
 
 .chapter {
@@ -700,6 +762,33 @@ html > .container {
   background-image: url("../img/skyb.jpg");
   background-repeat: no-repeat;
   background-size: 250%;
+}
+
+.chapter-container {
+  display: grid;
+  grid-template-areas: "sib tit tit" "sib txt img";
+  grid-template-columns: 15% 60% 25%;
+  grid-template-rows: auto auto;
+}
+
+.chapter-sidebar {
+  grid-area: sib;
+}
+
+.chapter-title {
+  grid-area: tit;
+}
+
+.chapter-text {
+  grid-area: txt;
+}
+
+.chapter-image-panel {
+  grid-area: img;
+}
+
+.chapter-text {
+  padding: 50px;
 }
 
 @media (orientation: landscape) {
