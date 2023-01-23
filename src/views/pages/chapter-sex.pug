@@ -1,0 +1,11 @@
+extends ../layouts/chapter-page
+
+block variables
+	- const title = "Глава Психология";
+	- const chapter_title = 'Психология';
+
+block chapter_text
+	include ../../blocks/modules/chapters-texts/1
+
+block scripts
+	script(src="js/main.js")
