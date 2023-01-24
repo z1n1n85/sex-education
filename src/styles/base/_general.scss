@@ -15,6 +15,6 @@ body, html{
     }
 }
 
-::selection{
+::selection, ::selection::after, ::selection::before{
     background: $blue;
 }

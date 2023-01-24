@@ -2,7 +2,7 @@
 
 window.onload = function() {
     const bg_paralax = document.querySelectorAll('.bg-paralax-sky');
-    const main_paralax = document.querySelector('.main-paralax')
+    const main_paralax = document.querySelector('.main-paralax');
 
     if (main_paralax){
         const bg_coleff = 15;
