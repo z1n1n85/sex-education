@@ -28,12 +28,12 @@ html(lang="ru")
 		link(rel="preconnect" href="https://fonts.googleapis.com")
 		link(rel="preconnect" href="https://fonts.gstatic.com")
 		link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap")
-		link(rel="stylesheet" type="text/css" href="styles/main.css")
+		link(rel="stylesheet" type="text/css" href="styles/chapter.css")
 	body
 		.container.chapter-container
 			include ../../blocks/modules/chapter-sidebar/chapter-sidebar
 			include ../../blocks/modules/chapter-title/chapter-title
 			include ../../blocks/modules/chapter-image-panel/chapter-image-panel
-			.chapter-text.border
+			.chapter-text-container.border
 				block chapter_text
-			block scripts
+		script(src="js/chapter_page.js")
