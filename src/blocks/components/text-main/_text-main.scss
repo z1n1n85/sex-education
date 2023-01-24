@@ -1,11 +1,11 @@
-.text, p, li{
+.text{
     font-weight: 400;
     font-size: 25px;
     line-height: 32px;
     font-family: $base-font;
     color: black;
     & + &{
-        margin-top: 0.5em;
+        margin-top: 1em;
     }
     &--link{
         text-decoration-line: underline;
@@ -24,13 +24,4 @@
     &--bold{
         font-weight: 700;
     }
-}
-
-.p-initial-letter::first-letter{
-    font-family: $header-font;
-    font-size: 5em;
-    font-style: normal;
-    color: black;
-    float: left;
-    margin: 0 10px 5px 0;
 }

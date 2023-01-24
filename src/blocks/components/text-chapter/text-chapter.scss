@@ -1,0 +1,36 @@
+.chapter-text-container{
+    padding: 50px;
+}
+
+p, li{
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 32px;
+    font-family: $base-font;
+    color: black;
+    * + &{
+        margin-top: 1em;
+    }
+}
+
+a{
+    text-decoration-line: underline;
+    &:visited, &:link{
+        color: inherit;
+        text-decoration-line: underline;
+    }
+    &:focus, &:hover{
+        color: $pink;
+        text-decoration-line: underline;
+    }
+}
+
+.p-initial-letter::first-letter{
+    font-family: $header-font;
+    font-size: 8em;
+    line-height: 1em;
+    font-style: normal;
+    color: black;
+    float: left;
+    margin: -0.28em 10px 5px 0;
+}
