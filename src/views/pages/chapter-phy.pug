@@ -1,0 +1,11 @@
+extends ../layouts/chapter-page
+include ../helpers/mixins
+
+block variables
+	- const title = "Глава Физиология";
+	- const chapter_title = 'Физиология';
+
+block chapter_text
+	include ../../blocks/modules/chapters-texts/3
+
+
