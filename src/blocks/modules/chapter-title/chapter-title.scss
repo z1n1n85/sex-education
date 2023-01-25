@@ -1,8 +1,19 @@
 .chapter-title{
-    padding: 25px;
+    padding: 15px 0;
     height: auto;
+    &__ticker-container{
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-start;
+    }
     &__text{
-        margin: -0.3em auto 0;
+        position: relative;
+        margin: -0.35em auto 0;
+        padding: 0 25px 0;
         width: fit-content;
         font-family: $header-font;
         color: white;
@@ -11,5 +22,12 @@
         text-transform: uppercase;
         font-size: min(34vw, 445px);
         line-height: 105%;
+        flex-shrink: 0;
+        animation: ticker 5s linear infinite;
     }
+}
+
+@keyframes ticker{
+    0% { transform: translateZ(0); }
+    100% { transform: translate3d(-100%, 0, 0); }
 }
