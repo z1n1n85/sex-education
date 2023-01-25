@@ -1,5 +1,49 @@
 .chapter-text-container{
     padding: 50px;
+    
+}
+
+h2{
+    counter-reset: point;
+    display: block;
+    margin-top: 2em;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 65px;
+    text-align: center;
+    color: black;
+    &::before, &::after{
+        margin: 0.65em 0;
+        position: relative;
+        display: block;
+        content: '';
+        border: 2px solid black;
+        width: 10%;
+        height: 0;
+    }
+    &::before{
+        margin-left: -50px;
+        float: left;
+    }
+    &::after{
+        margin-right: -50px;
+        float: right;
+    }
+}
+
+h3{
+    counter-increment: point;
+    margin-top: 1.6em;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 32px;
+    font-family: $base-font;
+    color: black;
+    &::before{
+        content: "п." counter(point) " ";
+    }
 }
 
 p, li{
@@ -8,9 +52,10 @@ p, li{
     line-height: 32px;
     font-family: $base-font;
     color: black;
-    * + &{
-        margin-top: 1em;
-    }
+}
+
+* + p, li{
+    margin-top: 0.7em;
 }
 
 a{
