@@ -6,7 +6,7 @@ if key % 2 != 0
                 ol.chapter__paragraph-container
                     each paragraph in chapter.paragraphs
                         li.chapter__paragraph-item
-                            a(href=chapter.link).chapter__paragraph #{paragraph}
+                            a(href=paragraph.link).chapter__paragraph #{paragraph.name}
 else 
     li.chapter.chapter--bg-pink.main-paralax
         .chapter__links
@@ -15,4 +15,4 @@ else
                 ol.chapter__paragraph-container
                     each paragraph in chapter.paragraphs
                         li.chapter__paragraph-item
-                            a(href=chapter.link).chapter__paragraph #{paragraph}
+                            a(href=paragraph.link).chapter__paragraph #{paragraph.name}
