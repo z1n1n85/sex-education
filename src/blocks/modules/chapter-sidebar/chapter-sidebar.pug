@@ -1,2 +1,19 @@
+include ../../components/table-of-contents-array/table-of-contents-array
+
+
 .chapter-sidebar.border
-    | chapter-sidebar
+    .chapter-sidebar__container 
+        .chapter-sidebar__item 
+            a(href='index.html').chapter-sidebar__link главная
+        .chapter-sidebar__item 
+            a(href='index.html#table-of-contents').chapter-sidebar__link содержание
+            .chapter-sidebar__table-of-contents.sidebar-table-of-contents
+                ul.sidebar-table-of-contents__list 
+                    each chapter, key in chapters
+                        li.sidebar-table-of-contents__item 
+                            a(href=chapter.link).sidebar-table-of-contents__link #{chapter.name}
+                            if chapter.paragraphs !== undefined
+                                ol.sidebar-table-of-contents__par-list
+                                    each paragraph in chapter.paragraphs
+                                        li.sidebar-table-of-contents__par-item 
+                                            a(href=paragraph.link).sidebar-table-of-contents__link #{paragraph.name}

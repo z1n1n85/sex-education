@@ -1,64 +1,6 @@
--
-    const chapters = [{
-            name: 'психология',
-            link: "chapter-psy.html",
-        },{
-            name: 'секс',
-            link: "chapter-sex.html",
-        },{
-            name: 'физиология',
-            link: "chapter-phy.html",
-            paragraphs: [{
-                name: 'Женская физиология',
-                link: 'chapter-phy.html#female-phy'
-                },{
-                name: 'Мужская физиология',
-                link: 'chapter-phy.html#male-phy'
-                },],
-        },{
-            name: 'контрацепция',
-            link: "chapter-gon.html",
-            paragraphs: [{
-                name: 'Барьерная',
-                link: 'chapter-gon.html#barrier'
-                },{
-                name: 'Гармональная',
-                link: 'chapter-gon.html#hormone'
-                },{
-                name: 'Химическая',
-                link: 'chapter-gon.html#chemical'
-                },{
-                name: 'Внутриматочная',
-                link: 'chapter-gon.html#intrauterine'
-                },{
-                name: 'Хирургическая',
-                link: 'chapter-gon.html#surgical'
-                },],
-        },{
-            name: 'зппп',
-            link: "chapter-std.html",
-            paragraphs: [{
-                name: 'ВИЧ',
-                link: 'chapter-std.html#hiv'
-                },{
-                name: 'Генитальный герпес',
-                link: 'chapter-std.html#genital-herpes'
-                },{
-                name: 'Сифилис',
-                link: 'chapter-std.html#syphilis'
-                },{
-                name: 'Хламидиоз',
-                link: 'chapter-std.html#chlamydia'
-                },{
-                name: 'Кандидоз (Молочница)',
-                link: 'chapter-std.html#candidiasis'
-                },],
-        },{
-            name: 'менструация',
-            link: "chapter-mns.html",
-        },];
+include ../../components/table-of-contents-array/table-of-contents-array
 
-.table-of-contents.border.section-container
+.table-of-contents.border.section-container#table-of-contents
     +section_name("Содержание")
     ol.table-of-contents__chapter-container
         each chapter, key in chapters 
