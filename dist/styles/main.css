@@ -440,10 +440,27 @@ html > .container {
   margin: 0 auto;
 }
 
-::selection,
-::selection::after,
-::selection::before {
+*::selection {
   background: #12CCE5;
+}
+
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: white;
+  border-left: 2px solid black;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: Gainsboro;
+  border: 2px solid black;
+  border-right: none;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: silver;
 }
 
 .title-screen {
@@ -752,7 +769,7 @@ html > .container {
   }
 
   .footer__credits {
-    width: 350px;
+    width: 500px;
   }
 
   .section-name__desctop-text {
