@@ -25,13 +25,12 @@ for (let [key, value] of imgsWithAnchors){
 const updateImgsPos = () => {
     let extraIndent = 0;
     let imgCordY = 0;
-    let prevImgHeight = 15;
+    let prevImgHeight = 115;
     for (let [key, value] of imgsWithAnchors){
         imgCordY = key.offsetTop - extraIndent;
         value.style.marginTop = `${imgCordY}px`;
         value.style.top = `${prevImgHeight}px`;
-        console.log(`${key.offsetTop}, ${value.offsetTop}, ${value.offsetHeight}, ${extraIndent}`);
-        prevImgHeight += value.offsetHeight + 15;
+        prevImgHeight += value.offsetHeight + 30;
         extraIndent = 0 + key.offsetTop + value.offsetHeight;
     }
 }

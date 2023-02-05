@@ -1,57 +1,21 @@
 .chapter-text-container{
-    padding: 50px;
     position: relative;
-}
-
-h2{
-    counter-reset: point;
-    display: block;
-    margin-top: 2em;
-    font-family: $base-font;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 65px;
-    text-align: center;
-    color: black;
-    &::before, &::after{
-        margin: 0.65em 0;
-        position: relative;
-        display: block;
-        content: '';
-        border: 2px solid black;
-        width: 10%;
-        height: 0;
-    }
-    &::before{
-        margin-left: -50px;
-        float: left;
-    }
-    &::after{
-        margin-right: -50px;
-        float: right;
-    }
-}
-
-h3{
-    counter-increment: point;
-    margin-top: 1.6em;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 32px;
-    font-family: $base-font;
-    color: black;
-    &::before{
-        content: "п." counter(point) " ";
-    }
 }
 
 p, li{
     font-weight: 400;
-    font-size: 25px;
-    line-height: 32px;
     font-family: $base-font;
     color: black;
+}
+
+.p-initial-letter::first-letter{
+    font-family: $header-font;
+    font-size: 8em;
+    line-height: 1em;
+    font-style: normal;
+    color: black;
+    float: left;
+    margin: -0.28em 10px 5px 0;
 }
 
 * + p, li{
@@ -70,12 +34,88 @@ a{
     }
 }
 
-.p-initial-letter::first-letter{
-    font-family: $header-font;
-    font-size: 8em;
-    line-height: 1em;
+h2{
+    counter-reset: point;
+    display: block;
+    margin-top: 2em;
+    font-family: $base-font;
     font-style: normal;
+    font-weight: 700;
+    text-align: center;
     color: black;
-    float: left;
-    margin: -0.28em 10px 5px 0;
+    &::before, &::after{
+        position: relative;
+        display: block;
+        content: '';
+        border: 2px solid black;
+        width: 10%;
+        height: 0;
+    }
+}
+
+h3{
+    counter-increment: point;
+    margin-top: 1.6em;
+    font-weight: 700;
+    font-family: $base-font;
+    color: black;
+    &::before{
+        content: "п." counter(point) " ";
+    }
+}
+
+@media (orientation: landscape) {
+    .chapter-text-container{
+        padding: 50px;
+    }
+    p, li, h3{
+        font-size: 25px;
+        line-height: 32px;
+    }
+    li{
+        margin-left: 25px;
+    }
+    h2{
+        font-size: 50px;
+        line-height: 65px;
+        &::before, &::after{
+            margin: 0.65em 0;
+        }
+        &::before{
+            margin-left: -50px;
+            float: left;
+        }
+        &::after{
+            margin-right: -50px;
+            float: right;
+        }
+    }
+}
+
+@media (orientation: portrait) {
+    .chapter-text-container{
+        padding: 25px 15px 25px 25px;
+    }
+    p, li, h3{
+        font-size: 20px;
+        line-height: 26px;
+    }
+    li{
+        margin-left: 20px;
+    }
+    h2{
+        font-size: 30px;
+        line-height: 95%;
+        &::before, &::after{
+            margin: 0.4em 0;
+        }
+        &::before{
+            margin-left: -25px;
+            float: left;
+        }
+        &::after{
+            margin-right: -15px;
+            float: right;
+        }
+    }
 }
