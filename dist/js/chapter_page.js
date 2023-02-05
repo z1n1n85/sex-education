@@ -62,7 +62,7 @@ try {
 var updateImgsPos = function updateImgsPos() {
   var extraIndent = 0;
   var imgCordY = 0;
-  var prevImgHeight = 15;
+  var prevImgHeight = 115;
   var _iterator2 = _createForOfIteratorHelper(imgsWithAnchors),
     _step2;
   try {
@@ -73,8 +73,7 @@ var updateImgsPos = function updateImgsPos() {
       imgCordY = key.offsetTop - extraIndent;
       value.style.marginTop = "".concat(imgCordY, "px");
       value.style.top = "".concat(prevImgHeight, "px");
-      console.log("".concat(key.offsetTop, ", ").concat(value.offsetTop, ", ").concat(value.offsetHeight, ", ").concat(extraIndent));
-      prevImgHeight += value.offsetHeight + 15;
+      prevImgHeight += value.offsetHeight + 30;
       extraIndent = 0 + key.offsetTop + value.offsetHeight;
     }
   } catch (err) {

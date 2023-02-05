@@ -436,7 +436,6 @@ html {
 body > .container,
 html > .container {
   max-width: 1280px;
-  padding: 15px;
   margin: 0 auto;
 }
 
@@ -444,13 +443,8 @@ html > .container {
   background: #12CCE5;
 }
 
-*::-webkit-scrollbar {
-  width: 15px;
-}
-
 *::-webkit-scrollbar-track {
   background-color: white;
-  border-left: 2px solid black;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -726,6 +720,19 @@ html > .container {
 }
 
 @media (orientation: landscape) {
+  body > .container,
+  html > .container {
+    padding: 15px;
+  }
+
+  *::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  *::-webkit-scrollbar-track {
+    border-left: 2px solid black;
+  }
+
   .title-screen__name--first-word {
     font-size: min(46vw, 600px);
     line-height: 40%;
@@ -784,6 +791,19 @@ html > .container {
 }
 
 @media (orientation: portrait) {
+  body > .container,
+  html > .container {
+    margin-right: -2px;
+  }
+
+  *::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  *::-webkit-scrollbar-track {
+    border-left: 2px solid black;
+  }
+
   .title-screen {
     flex-direction: column;
   }
