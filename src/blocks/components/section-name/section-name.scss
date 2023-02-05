@@ -25,9 +25,9 @@
             display: none;
         }
         &__border{
-            max-width: calc(100% + 2 * min(25px, 5vw));
+            max-width: calc(100% + 2 * $section-padding);
             display: flex;
-            margin: calc(-1 * (min(25px, 5vw) + 2px));
+            margin: calc(-1 * ($section-padding + 2px));
             margin-bottom: 25px;
             padding-bottom: 10px;
             border: 2px solid #000000;

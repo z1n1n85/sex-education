@@ -11,9 +11,9 @@
     &__dropdown-btn{
         position: relative;
         top: 3vw;
-        width: calc(100% + (min(25px, 5vw) + 2px) * 2);
+        width: calc(100% + ($section-padding + 2px) * 2);
         height: 2em;
-        margin: calc(-1 * (min(25px, 5vw) + 2px));
+        margin: calc(-1 * ($section-padding + 2px));
         margin-top: 0;
         background-color: white;
         border: 2px solid #000000;
