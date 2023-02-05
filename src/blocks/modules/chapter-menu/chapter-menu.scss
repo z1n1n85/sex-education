@@ -1,0 +1,187 @@
+.chapter-header-mobile, .chapter-sidebar-desctop{
+    z-index: 99;
+}
+
+.sidebar-table-of-contents{
+    &__item{
+        margin-top: 0;
+        list-style-type: none;
+    }
+    &__list{
+        margin-top: 1em;
+    }
+    &__par-item{
+        margin-top: 0;
+        margin-left: 40px;
+    }
+    &__link{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
+        width: 100%;
+        font-weight: 400;
+        text-decoration-line: none;
+        &:visited, &:link{
+            color: inherit;
+            text-decoration-line: none;
+        }
+        &:focus, &:hover{
+            color: $pink;
+            text-decoration-line: underline;
+        }
+    }
+}
+
+@media (orientation: landscape) {
+    .chapter-header-mobile {
+        display: none;
+    }
+    .chapter-menu{
+        height: 100%;
+        width: 99%;
+        background-color: white;
+        transition: width 0.5s;
+        &:hover, &:active, &:focus{
+            width: 400px;
+        }
+        &__container{
+            margin-top: -2px;
+            top: 0px;
+            position: sticky;
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            border-top: 2px solid black;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 32px;
+            font-family: $base-font;
+            color: black;
+        }
+        &__logo{
+            width: 100%;
+            padding: 15px;
+            white-space: normal;
+            font-family: $base-font;
+            color: white;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 100%;
+            border-block-end: 2px solid black
+        }
+        &__logo-name{
+            white-space: normal;
+            font-family: $base-font;
+            color: white;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 100%;
+        }
+        &__item{
+            margin-top: 0;
+            padding: 35px 15px;
+            border-block-end: 2px solid black
+        }
+        &__link{
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-weight: 700;
+            text-decoration-line: none;
+            &:visited, &:link{
+                color: inherit;
+                text-decoration-line: none;
+            }
+            &:focus, &:hover{
+                color: $pink;
+                text-decoration-line: underline;
+            }
+        }
+    }
+}
+
+@media (orientation: portrait) {
+    .chapter-sidebar-desctop {
+        display: none;
+    }
+    .chapter-header-mobile {
+        position: fixed;
+        width: calc(100% - 7px);
+    }
+    .chapter-menu{
+        width: 100%;
+        background-color: white;
+        transition: height 0.5s;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        &:hover .chapter-menu__logo,
+        &:active .chapter-menu__logo,
+        &:focus .chapter-menu__logo{
+            border-block-end: 2px solid black;
+        }
+        &:hover .chapter-menu__list,
+        &:active .chapter-menu__list,
+        &:focus .chapter-menu__list{
+            height: 70vh;
+        }
+        &__container{
+            width: 100%;
+            margin-top: -2px;
+            top: 0px;
+            border-top: 2px solid black;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 26px;
+            font-family: $base-font;
+            color: black;
+        }
+        &__logo{
+            padding: 15px;
+        }
+        &__logo-name{
+            width: 200px;
+            white-space: normal;
+            font-family: $base-font;
+            color: white;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 100%;
+        }
+        &__list{
+            transition: height 0.5s;
+            overflow-y: auto;
+            height: 0;
+        }
+        &__item{
+            & + &{
+                margin-bottom: 50px;
+            }
+            position: relative;
+            margin-top: 0;
+            padding: 20px 15px;
+            border-block-end: 2px solid black
+        }
+        &__link{
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-weight: 700;
+            text-decoration-line: none;
+            &:visited, &:link{
+                color: inherit;
+                text-decoration-line: none;
+            }
+            &:focus, &:hover{
+                color: $pink;
+                text-decoration-line: underline;
+            }
+        }
+    }
+}

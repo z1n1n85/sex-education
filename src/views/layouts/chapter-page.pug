@@ -30,8 +30,12 @@ html(lang="ru")
 		link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap")
 		link(rel="stylesheet" type="text/css" href="styles/chapter.css")
 	body
+		include ../../blocks/components/table-of-contents-array/table-of-contents-array
+		.chapter-header-mobile 
+			include ../../blocks/modules/chapter-menu/chapter-menu
 		.container.chapter-container
-			include ../../blocks/modules/chapter-sidebar/chapter-sidebar
+			.chapter-sidebar-desctop
+				include ../../blocks/modules/chapter-menu/chapter-menu
 			include ../../blocks/modules/chapter-title/chapter-title
 			include ../../blocks/modules/chapter-image-panel/chapter-image-panel
 			.chapter-text-container.border
