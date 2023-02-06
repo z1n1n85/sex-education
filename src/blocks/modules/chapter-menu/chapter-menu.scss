@@ -33,7 +33,7 @@
     }
 }
 
-@media (orientation: landscape) {
+@media (min-width: $tablet-screen) {
     .chapter-header-mobile {
         display: none;
     }
@@ -104,7 +104,7 @@
     }
 }
 
-@media (orientation: portrait) {
+@media (max-width: $tablet-screen) {
     .chapter-sidebar-desctop {
         display: none;
     }

@@ -64,7 +64,7 @@ h3{
     }
 }
 
-@media (orientation: landscape) {
+@media (min-width: 800px) {
     .chapter-text-container{
         padding: 50px;
     }
@@ -92,7 +92,7 @@ h3{
     }
 }
 
-@media (orientation: portrait) {
+@media (max-width: 800px) {
     .chapter-text-container{
         padding: 25px 15px 25px 25px;
     }

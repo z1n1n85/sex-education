@@ -32,14 +32,14 @@
 }
 
 
-@media (orientation: landscape) {
+@media (min-width: $tablet-screen) {
     .chapter-title{
         &__text{
             font-size: min(34vw, 445px);
         }
     }
 }
-@media (orientation: portrait) {
+@media (max-width: $tablet-screen) {
     .chapter-title{
         margin-top: 105px;
         &__text{

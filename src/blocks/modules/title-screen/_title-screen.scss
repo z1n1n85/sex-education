@@ -23,7 +23,7 @@
     }
 }
 
-@media (orientation: landscape) {
+@media (min-width: $tablet-screen) {
     .title-screen{
         &__name{
             &--first-word{
@@ -48,7 +48,7 @@
     }
 }
 // mobile
-@media (orientation: portrait) {
+@media (max-width: $tablet-screen) {
     .title-screen{
         flex-direction: column;
         &__section{

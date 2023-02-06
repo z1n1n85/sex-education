@@ -20,14 +20,14 @@
         text-align: center;
     }
 }
-@media (orientation: landscape) {
+@media (min-width: $tablet-screen) {
     .table-of-contents{
         &__dropdown-btn{
             display: none;
         }
     }
 }
-@media (orientation: portrait) {
+@media (max-width: $tablet-screen) {
     .table-of-contents{
         &__chapter-container{
             transition: height 2s;

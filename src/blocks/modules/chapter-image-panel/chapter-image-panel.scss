@@ -37,7 +37,7 @@ img{
     }
 }
 
-@media (orientation: portrait) {
+@media (max-width: $tablet-screen) {
     img{
         &:first-of-type{
             top: 100px;

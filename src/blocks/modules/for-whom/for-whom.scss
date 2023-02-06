@@ -1,4 +1,4 @@
-@media (orientation: landscape){
+@media (min-width: $tablet-screen){
     .for-whom{
         display: flex;
         &__text{
@@ -9,7 +9,7 @@
         }
     }
 }
-@media (orientation: portrait){
+@media (max-width: $tablet-screen){
     .for-whom{
         &__empty{
             display: none;

@@ -6,7 +6,8 @@
     line-height: max(min(360px, 28vw), 252px);
     text-transform: uppercase;
 }
-@media (orientation: landscape) {
+
+@media (min-width: $tablet-screen) {
     .section-name{
         &__desctop-text{
             margin-top: -0.37em;
@@ -17,9 +18,9 @@
         }
     }
 }
-@media (orientation: portrait) {
+
+@media (max-width: $tablet-screen) {
     .section-name{
-        // margin-top: max(-25.5vw, -90px);
         margin-bottom: 10px;
         &__desctop-text{
             display: none;

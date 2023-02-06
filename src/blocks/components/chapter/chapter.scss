@@ -78,7 +78,7 @@
     }
 }
 
-@media (orientation: portrait) {
+@media (max-width: $tablet-screen) {
     .chapter{
         min-width: 200px;
         max-height: 270px;

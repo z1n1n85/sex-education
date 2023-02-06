@@ -1,38 +1,33 @@
+.chapter-container{
+    display: grid;
+    grid-template-rows:
+    auto auto;
+}
+
 .chapter-sidebar-desctop { grid-area: sib; }
-
 .chapter-title { grid-area: tit; }
-
 .chapter-text{ grid-area: txt; }
-
 .chapter-image-panel{ grid-area: img; }
-
 .footer{ grid-area: fot; }
 
-@media (orientation: landscape) {
+@media (min-width: $tablet-screen) {
     .chapter-container{
-        display: grid;
         grid-template-areas:
         'sib tit tit'
         'sib txt img'
         'fot fot fot';
         grid-template-columns:
         20% 55% 25%;
-        grid-template-rows:
-        auto auto;
     }
 }
 
-
-@media (orientation: portrait) {
+@media (max-width: $tablet-screen){
     .chapter-container{
-        display: grid;
         grid-template-areas:
         'tit tit'
         'txt img'
         'fot fot';
         grid-template-columns:
         90% 10%;
-        grid-template-rows:
-        auto auto;
     }
 }
