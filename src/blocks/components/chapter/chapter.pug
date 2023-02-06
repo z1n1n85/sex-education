@@ -1,18 +1,15 @@
+-
+    let chapter_color = '';
 if key % 2 != 0
-    li.chapter.chapter--bg-sky.bg-paralax-sky.main-paralax
-        .chapter__links
-            a(href=chapter.link).chapter__name #{chapter.name}
-            if chapter.paragraphs !== undefined
-                ol.chapter__paragraph-container
-                    each paragraph in chapter.paragraphs
-                        li.chapter__paragraph-item
-                            a(href=paragraph.link).chapter__paragraph #{paragraph.name}
+    - chapter_color = 'chapter--bg-sky bg-paralax-sky';
 else 
-    li.chapter.chapter--bg-pink.main-paralax
-        .chapter__links
-            a(href=chapter.link).chapter__name #{chapter.name}
-            if chapter.paragraphs !== undefined
-                ol.chapter__paragraph-container
-                    each paragraph in chapter.paragraphs
-                        li.chapter__paragraph-item
-                            a(href=paragraph.link).chapter__paragraph #{paragraph.name}
+    - chapter_color = 'chapter--bg-pink';
+
+li(class = `chapter ${chapter_color} main-paralax`)
+    .chapter__links
+        a(href=chapter.link).chapter__name #{chapter.name}
+        if chapter.paragraphs !== undefined
+            ol.chapter__paragraph-container
+                each paragraph in chapter.paragraphs
+                    li.chapter__paragraph-item
+                        a(href=paragraph.link).chapter__paragraph #{paragraph.name}
