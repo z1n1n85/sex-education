@@ -444,10 +444,12 @@ html > .container {
 }
 
 *::-webkit-scrollbar-track {
+  z-index: 100;
   background-color: white;
 }
 
 *::-webkit-scrollbar-thumb {
+  z-index: 100;
   background-color: Gainsboro;
   border: 2px solid black;
   border-right: none;
@@ -510,6 +512,9 @@ html > .container {
 }
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: black;
   padding: 50px 100px 50px 100px;
   display: flex;
@@ -517,10 +522,11 @@ html > .container {
 }
 
 .footer__logo {
+  margin-top: -50px;
   font-family: "SegmentA", sans-serif;
   font-weight: 400;
   font-size: 150px;
-  line-height: 100px;
+  line-height: 150px;
   color: #FFFFFF;
 }
 
@@ -532,7 +538,7 @@ html > .container {
 
 .bg-anim-gradient {
   animation: animateBg 8s linear infinite;
-  background-image: linear-gradient(30deg, #12CCE5, #FF527B, #12CCE5, #FF527B);
+  background-image: linear-gradient(30deg, #12CCE5, #FF678B, #12CCE5, #FF678B);
   background-size: 300% 300%;
 }
 
@@ -560,6 +566,15 @@ html > .container {
 
 .text + .text {
   margin-top: 1em;
+}
+
+.text--mini {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.text--mini + .text--mini {
+  margin-top: 0.5em;
 }
 
 .text--link {
@@ -719,7 +734,7 @@ html > .container {
   background-size: 250%;
 }
 
-@media (orientation: landscape) {
+@media (min-width: 720px) {
   body > .container,
   html > .container {
     padding: 15px;
@@ -776,7 +791,7 @@ html > .container {
   }
 
   .footer__credits {
-    width: 500px;
+    width: 350px;
   }
 
   .section-name__desctop-text {
@@ -790,7 +805,7 @@ html > .container {
   }
 }
 
-@media (orientation: portrait) {
+@media (max-width: 720px) {
   body > .container,
   html > .container {
     margin-right: -2px;
@@ -862,7 +877,7 @@ html > .container {
   }
 
   .footer__logo {
-    margin-bottom: 75px;
+    margin-bottom: 40px;
   }
 
   .chapter {

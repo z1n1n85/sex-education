@@ -444,10 +444,12 @@ html > .container {
 }
 
 *::-webkit-scrollbar-track {
+  z-index: 100;
   background-color: white;
 }
 
 *::-webkit-scrollbar-thumb {
+  z-index: 100;
   background-color: Gainsboro;
   border: 2px solid black;
   border-right: none;
@@ -580,6 +582,9 @@ img {
 }
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: black;
   padding: 50px 100px 50px 100px;
   display: flex;
@@ -587,10 +592,11 @@ img {
 }
 
 .footer__logo {
+  margin-top: -50px;
   font-family: "SegmentA", sans-serif;
   font-weight: 400;
   font-size: 150px;
-  line-height: 100px;
+  line-height: 150px;
   color: #FFFFFF;
 }
 
@@ -602,7 +608,7 @@ img {
 
 .bg-anim-gradient {
   animation: animateBg 8s linear infinite;
-  background-image: linear-gradient(30deg, #12CCE5, #FF527B, #12CCE5, #FF527B);
+  background-image: linear-gradient(30deg, #12CCE5, #FF678B, #12CCE5, #FF678B);
   background-size: 300% 300%;
 }
 
@@ -618,6 +624,11 @@ img {
 
 .section-container {
   padding: min(25px, 5vw);
+}
+
+.chapter-container {
+  display: grid;
+  grid-template-rows: auto auto;
 }
 
 .chapter-sidebar-desctop {
@@ -727,6 +738,15 @@ h3::before {
   margin-top: 1em;
 }
 
+.text--mini {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.text--mini + .text--mini {
+  margin-top: 0.5em;
+}
+
 .text--link {
   text-decoration-line: underline;
 }
@@ -751,7 +771,7 @@ h3::before {
   font-weight: 700;
 }
 
-@media (orientation: landscape) {
+@media (min-width: 720px) {
   body > .container,
   html > .container {
     padding: 15px;
@@ -856,16 +876,16 @@ h3::before {
   }
 
   .footer__credits {
-    width: 500px;
+    width: 350px;
   }
 
   .chapter-container {
-    display: grid;
     grid-template-areas: "sib tit tit" "sib txt img" "fot fot fot";
     grid-template-columns: 20% 55% 25%;
-    grid-template-rows: auto auto;
   }
+}
 
+@media (min-width: 800px) {
   .chapter-text-container {
     padding: 50px;
   }
@@ -902,7 +922,44 @@ h3::before {
   }
 }
 
-@media (orientation: portrait) {
+@media (max-width: 800px) {
+  .chapter-text-container {
+    padding: 25px 15px 25px 25px;
+  }
+
+  p,
+  li,
+  h3 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  li {
+    margin-left: 20px;
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 95%;
+  }
+
+  h2::before,
+  h2::after {
+    margin: 0.4em 0;
+  }
+
+  h2::before {
+    margin-left: -25px;
+    float: left;
+  }
+
+  h2::after {
+    margin-right: -15px;
+    float: right;
+  }
+}
+
+@media (max-width: 720px) {
   body > .container,
   html > .container {
     margin-right: -2px;
@@ -1043,49 +1100,12 @@ h3::before {
   }
 
   .footer__logo {
-    margin-bottom: 75px;
+    margin-bottom: 40px;
   }
 
   .chapter-container {
-    display: grid;
     grid-template-areas: "tit tit" "txt img" "fot fot";
     grid-template-columns: 90% 10%;
-    grid-template-rows: auto auto;
-  }
-
-  .chapter-text-container {
-    padding: 25px 15px 25px 25px;
-  }
-
-  p,
-  li,
-  h3 {
-    font-size: 20px;
-    line-height: 26px;
-  }
-
-  li {
-    margin-left: 20px;
-  }
-
-  h2 {
-    font-size: 30px;
-    line-height: 95%;
-  }
-
-  h2::before,
-  h2::after {
-    margin: 0.4em 0;
-  }
-
-  h2::before {
-    margin-left: -25px;
-    float: left;
-  }
-
-  h2::after {
-    margin-right: -15px;
-    float: right;
   }
 }
 /*# sourceMappingURL=maps/chapter.css.map */
