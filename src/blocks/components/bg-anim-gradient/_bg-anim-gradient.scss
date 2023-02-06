@@ -1,6 +1,6 @@
 .bg-anim-gradient {
     animation: animateBg 8s linear infinite;
-    background-image: linear-gradient(30deg, #12CCE5, #FF527B, #12CCE5, #FF527B);
+    background-image: linear-gradient(30deg, $blue, $pink, $blue, $pink);
     background-size: 300% 300%;
   }
   @keyframes animateBg {
