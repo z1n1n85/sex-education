@@ -696,7 +696,7 @@ a:hover {
 h2 {
   counter-reset: point;
   display: block;
-  margin-top: 2em;
+  margin-top: 1.5em;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -771,6 +771,70 @@ h3::before {
   font-weight: 700;
 }
 
+.scheme__img {
+  width: 100%;
+  height: auto;
+  margin-top: 1em;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.scheme__container-img .scheme__img {
+  display: none;
+}
+
+.scheme__radio {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.scheme__option {
+  width: 50%;
+  margin-right: -2px;
+  padding: 5px 10px;
+  border: 2px solid black;
+}
+
+.scheme__option--blue p {
+  text-align: center;
+  color: #12CCE5;
+}
+
+.scheme__option--pink p {
+  text-align: center;
+  color: #FF678B;
+}
+
+.radio-option {
+  opacity: 0;
+}
+
+.radio-option--blue:checked ~ .scheme__container-img .scheme__img--blue {
+  display: block;
+}
+
+.radio-option--blue:checked ~ .scheme__radio .scheme__option--blue {
+  background-color: #12CCE5;
+}
+
+.radio-option--blue:checked ~ .scheme__radio .scheme__option--blue p {
+  color: white;
+}
+
+.radio-option--pink:checked ~ .scheme__container-img .scheme__img--pink {
+  display: block;
+}
+
+.radio-option--pink:checked ~ .scheme__radio .scheme__option--pink {
+  background-color: #FF678B;
+}
+
+.radio-option--pink:checked ~ .scheme__radio .scheme__option--pink p {
+  color: white;
+}
+
 @media (min-width: 720px) {
   body > .container,
   html > .container {
@@ -808,6 +872,7 @@ h3::before {
 
   .chapter-menu__container {
     margin-top: -2px;
+    margin-right: -2px;
     top: 0px;
     position: sticky;
     height: 100vh;
@@ -871,6 +936,10 @@ h3::before {
     text-decoration-line: underline;
   }
 
+  .chapter-menu__tail {
+    display: none;
+  }
+
   .footer {
     flex-direction: row;
   }
@@ -893,8 +962,8 @@ h3::before {
   p,
   li,
   h3 {
-    font-size: 25px;
-    line-height: 32px;
+    font-size: 20px;
+    line-height: 26px;
   }
 
   li {
@@ -930,8 +999,8 @@ h3::before {
   p,
   li,
   h3 {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 18px;
+    line-height: 24px;
   }
 
   li {
@@ -1006,7 +1075,6 @@ h3::before {
 
   .chapter-menu {
     width: 100%;
-    background-color: white;
     transition: height 0.5s;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -1025,6 +1093,7 @@ h3::before {
   }
 
   .chapter-menu__container {
+    background-color: white;
     width: 100%;
     margin-top: -2px;
     top: 0px;
@@ -1088,6 +1157,16 @@ h3::before {
   .chapter-menu__link:hover {
     color: #FF678B;
     text-decoration-line: underline;
+  }
+
+  .chapter-menu__tail {
+    margin-top: -1px;
+    width: 25px;
+    border-radius: 0 0 10px 10px;
+    background-color: white;
+    font-size: 25px;
+    line-height: 28px;
+    text-align: center;
   }
 
   .footer {
