@@ -6,3 +6,20 @@ mixin section_name(name)
             .section-name__mobile-text= name
             .section-name__mobile-text= name
             .section-name__mobile-text= name
+
+mixin scheme(src_1, src_2, n_1, n_2)
+    .scheme
+        if src_2 == undefined
+            img(src=src_1, alt="", class='scheme__img')
+        else 
+            input( type="radio" name=`select-${n_1}` class='radio-option radio-option--blue' id=`option-${n_1}` checked)
+            input( type="radio" name=`select-${n_1}` class='radio-option radio-option--pink' id=`option-${n_2}`)
+            .scheme__radio
+                label( for=`option-${n_1}` class=`scheme__option scheme__option--blue scheme__option--${n_1}`)
+                    p Схема 1
+                label( for=`option-${n_2}` class=`scheme__option scheme__option--pink scheme__option--${n_2}`)
+                    p Схема 2
+            .scheme__container-img 
+                img(src=src_1, alt="", class=`scheme__img scheme__img--blue scheme__img--${n_1}`)
+                img(src=src_2, alt="", class=`scheme__img scheme__img--pink scheme__img--${n_2}`)
+

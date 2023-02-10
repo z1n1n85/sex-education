@@ -2,7 +2,7 @@
 
 const txtPanel = document.querySelector('.chapter-text-container');
 const imgPanel = document.querySelector('.chapter-image-panel');
-const chapterImgs = Array.from(document.querySelectorAll('img'));
+const chapterImgs = Array.from(document.querySelectorAll('.img-for-panel'));
 
 let imgsWithAnchors = new Map();
 

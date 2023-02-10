@@ -37,7 +37,7 @@ a{
 h2{
     counter-reset: point;
     display: block;
-    margin-top: 2em;
+    margin-top: 1.5em;
     font-family: $base-font;
     font-style: normal;
     font-weight: 700;
@@ -69,8 +69,8 @@ h3{
         padding: 50px;
     }
     p, li, h3{
-        font-size: 25px;
-        line-height: 32px;
+        font-size: 20px;
+        line-height: 26px;
     }
     li{
         margin-left: 25px;
@@ -97,8 +97,8 @@ h3{
         padding: 25px 15px 25px 25px;
     }
     p, li, h3{
-        font-size: 20px;
-        line-height: 26px;
+        font-size: 18px;
+        line-height: 24px;
     }
     li{
         margin-left: 20px;

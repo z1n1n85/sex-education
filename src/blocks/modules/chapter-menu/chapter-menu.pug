@@ -1,5 +1,5 @@
-section.chapter-menu.border
-    .chapter-menu__container
+section.chapter-menu 
+    .chapter-menu__container.border
         .chapter-menu__logo.bg-anim-gradient
             p.chapter-menu__logo-name #[i секс] и другие #[i шокирующие] вопросы
         .chapter-menu__list
@@ -17,3 +17,5 @@ section.chapter-menu.border
                                         each paragraph in chapter.paragraphs
                                             li.sidebar-table-of-contents__par-item 
                                                 a(href=paragraph.link).sidebar-table-of-contents__link #{paragraph.name}
+    .chapter-menu__tail.border
+        p ...
