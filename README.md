@@ -17,3 +17,9 @@
 </br>
 Сайт разработан по БЭМ методологии, на основе <a href="https://github.com/andreyalexeich/gulp-pug-starter">gulp-сборки</a>.
 В проекте используются препроцессоры SCSS и PUG. Код проекта выполнен на ванильном JS.
+<h2> Изображения:</h2>
+<img src="readme img/1.jpg"/>
+</br>
+<img src="readme img/2.jpg"/>
+</br>
+<img src="readme img/3.jpg"/>
