@@ -30,7 +30,7 @@
         line-height: 160px;
         color: white;
     }
-    &:focus-within, &:hover{
+    &:focus-within{
         border: 3px solid black;
         &::before{
             color: black;
